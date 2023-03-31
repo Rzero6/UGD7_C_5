@@ -25,7 +25,10 @@ public class UGD7_C_5 {
      */
     public static void main(String[] args) {
         //Scanner scan = new Scanner (System.in);
-        // TODO code application logic here
+        
+        try{
+            // TODO code application logic here
+        }catch(Exception e){}
     }
 
 }
