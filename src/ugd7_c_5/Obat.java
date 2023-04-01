@@ -19,6 +19,8 @@ public class Obat <X,Y> {
     }
     
     public void showObat(){
-        System.out.println("");
+        System.out.println("\tNama\t: "+namaObat);
+        System.out.println("\tJenis\t: "+jenisObat);
+        System.out.println("\tHarga\t: "+harga);
     }
 }
