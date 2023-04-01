@@ -39,7 +39,7 @@ public class UGD7_C_5 {
             
             Apoteker<Integer,String> A1 = new Apoteker<>(1234,2025,"Lala");
             System.out.println("\nMasukkan ID Apoteker : ");idApoteker = Integer.parseInt(br.readLine());
-            System.out.println("Masukkan Nama APoteker : ");namaApoteker = br.readLine();
+            System.out.println("Masukkan Nama Apoteker : ");namaApoteker = br.readLine();
             System.out.println("Masukkan Tahun Masuk : ");tahunMasuk = Integer.parseInt(br.readLine());
             Apoteker<Integer,String> A2 = new Apoteker<>(idApoteker,tahunMasuk,namaApoteker);
             
