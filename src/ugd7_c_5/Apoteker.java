@@ -21,6 +21,6 @@ public class Apoteker<T,U> {
     public void showApoteker(){
         System.out.println("\tID Apoteker       : "+idApoteker);
         System.out.println("\tNama Apoteker     : "+namaApoteker);
-        System.out.println("\tTahun Masuk       :"+tahunMasuk);
+        System.out.println("\tTahun Masuk       : "+tahunMasuk);
     }
 }

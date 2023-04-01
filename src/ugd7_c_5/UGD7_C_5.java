@@ -31,13 +31,44 @@ public class UGD7_C_5 {
         String namaApoteker;
         
         try{
+            Obat<String,Float> O1 = new Obat<>("Migrain","Pill",10000f);
             System.out.println("Masukkan Nama Obat : ");namaObat = br.readLine();
             System.out.println("Masukkan Jenis Obat : ");jenisObat = br.readLine();
             System.out.println("Masukkan Harga Obat : ");harga = Float.parseFloat(br.readLine());
+            Obat<String,Float> O2 = new Obat<>(namaObat,jenisObat,harga);
             
-            System.out.println("Masukkan ID Apoteker : ");idApoteker = Integer.parseInt(br.readLine());
+            Apoteker<Integer,String> A1 = new Apoteker<>(1234,2025,"Lala");
+            System.out.println("\nMasukkan ID Apoteker : ");idApoteker = Integer.parseInt(br.readLine());
             System.out.println("Masukkan Nama APoteker : ");namaApoteker = br.readLine();
             System.out.println("Masukkan Tahun Masuk : ");tahunMasuk = Integer.parseInt(br.readLine());
+            Apoteker<Integer,String> A2 = new Apoteker<>(idApoteker,tahunMasuk,namaApoteker);
+            
+            Apotek AP1 = new Apotek("Apotek 1 - 5");
+            AP1.addX(O1);
+            AP1.addX(O2);
+            
+            Apotek AP2 = new Apotek("Apotek 2 - 5");
+            AP2.addX(A1);
+            AP2.addX(A2);
+            
+            System.out.println("========================================");
+            System.out.println("\t"+AP1.getNamaApotek());
+            System.out.println("\t\t[Data Obat]");
+            for(int i=0 ; i<AP1.getDaftarX().size();i++){
+                System.out.println("\n\t\t==Obat "+(i+1)+"==");
+                Obat obat = (Obat) AP1.getDaftarX().get(i);
+                obat.showObat();
+            }
+            System.out.println("========================================");
+            System.out.println("\t"+AP2.getNamaApotek());
+            System.out.println("\t\t[Data Apoteker]");
+            for(int i=0 ; i<AP2.getDaftarX().size();i++){
+                System.out.println("\n\t\t==Apoteker "+(i+1)+"==");
+                Apoteker apoteker = (Apoteker) AP2.getDaftarX().get(i);
+                apoteker.showApoteker();
+            }
+            System.out.println("========================================");
+            
         }catch(Exception e){}
     }
 
