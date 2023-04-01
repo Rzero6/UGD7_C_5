@@ -24,10 +24,20 @@ public class UGD7_C_5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //Scanner scan = new Scanner (System.in);
+        String namaApotek;
+        String namaObat, jenisObat;
+        float harga;
+        int idApoteker, tahunMasuk;
+        String namaApoteker;
         
         try{
-            // TODO code application logic here
+            System.out.println("Masukkan Nama Obat : ");namaObat = br.readLine();
+            System.out.println("Masukkan Jenis Obat : ");jenisObat = br.readLine();
+            System.out.println("Masukkan Harga Obat : ");harga = Float.parseFloat(br.readLine());
+            
+            System.out.println("Masukkan ID Apoteker : ");idApoteker = Integer.parseInt(br.readLine());
+            System.out.println("Masukkan Nama APoteker : ");namaApoteker = br.readLine();
+            System.out.println("Masukkan Tahun Masuk : ");tahunMasuk = Integer.parseInt(br.readLine());
         }catch(Exception e){}
     }
 
