@@ -25,7 +25,7 @@ public class UGD7_C_5 {
      */
     public static void main(String[] args) {
         String namaApotek;
-        String namaObat, jenisObat;
+        String namaObat, jenisObat, namaAlat;
         float harga;
         int idApoteker, tahunMasuk;
         String namaApoteker;
@@ -43,6 +43,11 @@ public class UGD7_C_5 {
             System.out.println("Masukkan Tahun Masuk : ");tahunMasuk = Integer.parseInt(br.readLine());
             Apoteker<Integer,String> A2 = new Apoteker<>(idApoteker,tahunMasuk,namaApoteker);
             
+            AlatKesehatan<String,Float> AK1 = new AlatKesehatan<>("Stetoskop",4000000f);
+            System.out.println("\nMasukkan Nama Alat: ");namaAlat=br.readLine();
+            System.out.println("Masukkan Harga Alat: ");harga=Float.parseFloat(br.readLine());
+            AlatKesehatan<String, Float> AK2 = new AlatKesehatan<>(namaAlat,harga);
+            
             Apotek AP1 = new Apotek("Apotek 1 - 5");
             AP1.addX(O1);
             AP1.addX(O2);
@@ -50,6 +55,10 @@ public class UGD7_C_5 {
             Apotek AP2 = new Apotek("Apotek 2 - 5");
             AP2.addX(A1);
             AP2.addX(A2);
+            
+            Apotek AP3 = new Apotek("Apotek 3 - 5");
+            AP3.addX(AK1);
+            AP3.addX(AK2);
             
             System.out.println("========================================");
             System.out.println("\t"+AP1.getNamaApotek());
@@ -66,6 +75,14 @@ public class UGD7_C_5 {
                 System.out.println("\n\t\t==Apoteker "+(i+1)+"==");
                 Apoteker apoteker = (Apoteker) AP2.getDaftarX().get(i);
                 apoteker.showApoteker();
+            }
+            System.out.println("========================================");
+            System.out.println("\t"+AP3.getNamaApotek());
+            System.out.println("\t\t[Data Alat Kesehatan]");
+            for(int i=0 ; i<AP3.getDaftarX().size();i++){
+                System.out.println("\n\t\t==Alat Kesehatan "+(i+1)+"==");
+                AlatKesehatan alatKesehatan = (AlatKesehatan) AP3.getDaftarX().get(i);
+                alatKesehatan.showDataAlatKesehatan();
             }
             System.out.println("========================================");
             
